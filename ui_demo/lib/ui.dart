@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo/appbar.dart';
+import 'appbar.dart';
 
 class ui extends StatelessWidget {
   @override
@@ -38,26 +40,25 @@ class ui extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/profile.jpeg', // Replace with your image path
-              width: 150, // Adjust the width as needed
-              height: 150, // Adjust the height as needed
-            ),
-            const SizedBox(height: 20), // Add some space between image and text
-            const Text(
-              'Hello!',
-              style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic
-              ),
-            ),
-            const Text(
-              'Contact Moksh',
-              style: TextStyle(fontSize: 24),
-            ),
+            // Image.asset(
+            //   'assets/images/profile.jpeg', // Replace with your image path
+            //   width: 150, // Adjust the width as needed
+            //   height: 150, // Adjust the height as needed
+            // ),
+            // const SizedBox(height: 20), // Add some space between image and text
+            // const Text(
+            //   'Hello!',
+            //   style: TextStyle(fontSize: 24,fontStyle: FontStyle.italic
+            //   ),
+            // ),
+            // const Text(
+            //   'Contact Moksh',
+            //   style: TextStyle(fontSize: 24),
+            // ),
             ElevatedButton(
               onPressed: () {
                 print('Button pressed of Instagram!');
-                // Add your button onPressed logic here
-                // This function will be called when the button is pressed
+                appbar();
               },
               child: const Text('Instagram'), // Add your button text here
             ),
