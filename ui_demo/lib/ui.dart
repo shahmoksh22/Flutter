@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_demo/appbar.dart';
-import 'appbar.dart';
+import 'change.dart';
 
 class ui extends StatelessWidget {
   @override
@@ -58,7 +57,7 @@ class ui extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 print('Button pressed of Instagram!');
-                appbar();
+                change();
               },
               child: const Text('Instagram'), // Add your button text here
             ),

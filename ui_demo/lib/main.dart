@@ -6,6 +6,8 @@ import 'text.dart';
 import 'ElevatedButton.dart';
 import 'change.dart';
 import 'lateandalert.dart';
+import 'LabWorkChapter2Work1.dart';
+import 'MainMenu.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:ui(),
+      home:MainMenu(),
     );
   }
 }
