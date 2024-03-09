@@ -1,8 +1,38 @@
+
+import 'dart:io';
+
 void main() {
- main1();
- main2();
- main3();
+  bool exit = false;
+
+  while (!exit) {
+    print("Choose an option:");
+    print("1. WAP using FormatException example.");
+    print("2. WAP using final block.");
+    print("3. WAP Using try-catch block.");
+    print("0. Exit");
+
+    int option = int.parse(stdin.readLineSync()!);
+
+    switch (option) {
+      case 1:
+        main1();
+        break;
+      case 2:
+        main2();
+        break;
+      case 3:
+        main3();
+        break;
+      case 0:
+        exit = true;
+        print("Exiting program...");
+        break;
+      default:
+        print("Invalid option");
+    }
+  }
 }
+
 main1(){
   try {
     String amount = 'abc';

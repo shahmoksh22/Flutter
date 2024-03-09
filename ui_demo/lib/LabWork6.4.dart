@@ -23,11 +23,36 @@ class Product {
     );
   }
 }
-
 void main() {
-  StudentsFunction();
-  Ecommerce();
-  main3();
+  bool exit = false;
+
+  while (!exit) {
+    print("Choose an option:");
+    print("1. Display 30 Students Data with Roll no and name and Course with Factory Constructor.");
+    print("2. Create Ecommerce product List<Map> and convert into List of Model and print all data Price descending ordered (Minimum 20 product). ");
+    print("Create a program to online food delivery. \n- Create food item list using a map (minimum - 20 product) \n- Convert list map to list of model. \n- And show data like menu driven system\na. Ascending order\nb. Descending order\nc. Filter data between two price Like  user enter ( 200 to 600 ) show in between product");
+    print("0. Exit");
+
+    int option = int.parse(stdin.readLineSync()!);
+
+    switch (option) {
+      case 1:
+        StudentsFunction();
+        break;
+      case 2:
+        Ecommerce();
+        break;
+      case 3:
+        main3();
+        break;
+      case 0:
+        exit = true;
+        print("Exiting program...");
+        break;
+      default:
+        print("Invalid option");
+    }
+  }
 }
 
 StudentsFunction() {
