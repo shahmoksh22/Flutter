@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ui_demo/LabWork8.1/Screen3.dart';
-import 'package:ui_demo/LabWork8.1/Task4.dart';
-import 'package:ui_demo/LabWork8.1/Task5.dart';
-import 'package:ui_demo/LabWork8.1/Task6.dart';
-import 'package:ui_demo/LabWork8.1/Task7.dart';
-import 'package:ui_demo/LabWork8.1/Task8.dart';
+import 'Task6.dart';
+import 'package:ui_demo/LabWork8.2/Task3.dart';
+import 'package:ui_demo/LabWork8.2/Task2.dart';
 import 'Task1.dart';
-import 'Task2.dart';
+import 'Task4.dart';
+import 'Task5.dart';
 
-class MainMenu2 extends StatelessWidget {
-  const MainMenu2({Key? key}) : super(key: key);
+class MainMenu82 extends StatelessWidget {
+  const MainMenu82({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Text('Lab Work 8.1'),
+        title: const Text('Lab Work 8.2'),
       ),
       body: Stack(
         children: [
@@ -27,7 +25,7 @@ class MainMenu2 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Home()),
+                    MaterialPageRoute(builder: (context) => Screen1()),
                   );
                   print('Clicked Task 1');
                 },
@@ -37,9 +35,9 @@ class MainMenu2 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Home2()),
+                    MaterialPageRoute(builder: (context) => Screen2()),
                   );
-                  print('Task 2');
+                  print('Clicked Task 2');
                 },
               ),
               ListTile(
@@ -49,7 +47,7 @@ class MainMenu2 extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => Screen3()),
                   );
-                  print('Task 3');
+                  print('Clicked Task 3');
                 },
               ),
               ListTile(
@@ -57,9 +55,9 @@ class MainMenu2 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Homepage4()),
+                    MaterialPageRoute(builder: (context) => Screen4()),
                   );
-                  print('Task 4');
+                  print('Clicked Task 4');
                 },
               ),
               ListTile(
@@ -69,7 +67,7 @@ class MainMenu2 extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => Screen5()),
                   );
-                  print('Task 5');
+                  print('Clicked Task 5');
                 },
               ),
               ListTile(
@@ -79,27 +77,7 @@ class MainMenu2 extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => Screen6()),
                   );
-                  print('Task 6');
-                },
-              ),
-              ListTile(
-                title: const Text('Task 7'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen7()),
-                  );
-                  print('Task 7');
-                },
-              ),
-              ListTile(
-                title: const Text('Task 8'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen8()),
-                  );
-                  print('Task 8');
+                  print('Clicked Task 6');
                 },
               ),
             ],

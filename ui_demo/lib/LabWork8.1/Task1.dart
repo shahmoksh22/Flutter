@@ -3,18 +3,13 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Home()  ,
+    home: Home(),
   ));
 }
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,81 +36,106 @@ class _HomeState extends State<Home> {
             )
         ),
       ),
-      body: Align(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 320,
-                width: 320,
-                decoration: BoxDecoration(
-                  color: Colors.lightGreenAccent,
-                  border: Border.all(
-                      width: 20,
-                      style: BorderStyle.solid,
-                      color: Colors.green),
-                ),
-                child: const Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 150),
-                      child: Text.rich(
-                        TextSpan(
-                          text: "o",
-                          style: TextStyle(
-                            fontSize: 190,
-                            fontWeight: FontWeight.w100,
-                            color: Color.fromRGBO(0, 0, 0, 150),
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 320,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: Colors.lightGreenAccent,
+                    border: Border.all(
+                        width: 20,
+                        style: BorderStyle.solid,
+                        color: Colors.green),
+                  ),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 150),
+                        child: Text.rich(
+                          TextSpan(
+                            text: "o",
+                            style: TextStyle(
+                              fontSize: 190,
+                              fontWeight: FontWeight.w100,
+                              color: Color.fromRGBO(0, 0, 0, 150),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 50),
-                      child: Text.rich(
-                        TextSpan(
-                          text: "o",
-                          style: TextStyle(
-                            fontSize: 190,
-                            fontWeight: FontWeight.w100,
-                            color: Color.fromRGBO(0, 0, 0, 150),
+                      Padding(
+                        padding: EdgeInsets.only(left: 50),
+                        child: Text.rich(
+                          TextSpan(
+                            text: "o",
+                            style: TextStyle(
+                              fontSize: 190,
+                              fontWeight: FontWeight.w100,
+                              color: Color.fromRGBO(0, 0, 0, 150),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 50),
-                      child: Text.rich(
-                        TextSpan(
-                          text: "o",
-                          style: TextStyle(
-                            fontSize: 190,
-                            fontWeight: FontWeight.w100,
-                            color: Color.fromRGBO(0, 0, 0, 150),
+                      Padding(
+                        padding: EdgeInsets.only(right: 50),
+                        child: Text.rich(
+                          TextSpan(
+                            text: "o",
+                            style: TextStyle(
+                              fontSize: 190,
+                              fontWeight: FontWeight.w100,
+                              color: Color.fromRGBO(0, 0, 0, 150),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 150),
-                      child: Text.rich(
-                        TextSpan(
-                          text: "o",
-                          style: TextStyle(
-                            fontSize: 190,
-                            fontWeight: FontWeight.w100,
-                            color: Color.fromRGBO(0, 0, 0, 150),
+                      Padding(
+                        padding: EdgeInsets.only(left: 150),
+                        child: Text.rich(
+                          TextSpan(
+                            text: "o",
+                            style: TextStyle(
+                              fontSize: 190,
+                              fontWeight: FontWeight.w100,
+                              color: Color.fromRGBO(0, 0, 0, 150),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          // Positioned bottom right widget
+          BottomRightText(),
+        ],
+      ),
+    );
+  }
+}
+
+class BottomRightText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: Text(
+          'Made by ShahMoksh22',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Screen8 extends StatefulWidget
-{
-  @override
-  State<StatefulWidget> createState() {
-    return Screen8State();
-  }
-}
-class Screen8State extends State<Screen8>
-{
+class Screen8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,55 +11,57 @@ class Screen8State extends State<Screen8>
         children: [
           Align(
             child: Center(
-              child:  Container(
+              child: Container(
                 height: 300,
                 width: 300,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                        width: 40,
-                        color: Colors.orange
-                    )
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    width: 40,
+                    color: Colors.orange,
+                  ),
                 ),
               ),
             ),
           ),
           Align(
-            alignment: Alignment(0,-0.07),
+            alignment: Alignment(0, -0.07),
             child: Container(
-                height: 220,
-                width: 220,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.orange
-                ),
-                child: Align(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white
-                          ),
+              height: 220,
+              width: 220,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.orange,
+              ),
+              child: Align(
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
                         ),
-                        Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white
-                          ),
+                      ),
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                )
+                ),
+              ),
             ),
-          )
+          ),
+          // Positioned bottom right widget
+          BottomRightText(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -81,6 +75,26 @@ class Screen8State extends State<Screen8>
               color: Colors.white,
               fontSize: 25,
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BottomRightText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: Text(
+          'Made by ShahMoksh22',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

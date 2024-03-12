@@ -3,18 +3,13 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Home2()  ,
+    home: Home2(),
   ));
 }
 
-class Home2 extends StatefulWidget {
-  const Home2({super.key});
+class Home2 extends StatelessWidget {
+  const Home2({Key? key}) : super(key: key);
 
-  @override
-  State<Home2> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,60 +36,83 @@ class _HomeState extends State<Home2> {
             )
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
         children: [
-          Center(
-            child: Align(
-              alignment: Alignment.center,
-              child: Container(
-                height: 100,
-                width: 320,
-                padding: EdgeInsets.only(top:25,left: 10),
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(252, 161, 172, 100),
-                  border: Border(
-                      left: BorderSide(
-                          color: Colors.red,
-                          width: 10,
-                      )
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 100,
+                    width: 320,
+                    padding: EdgeInsets.only(top:25,left: 10),
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(252, 161, 172, 100),
+                      border: Border(
+                          left: BorderSide(
+                            color: Colors.red,
+                            width: 10,
+                          )
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(text: const TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Shaping "Skills" for "scaling" ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ]
+                        )),
+                        RichText(text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '-RNW',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ]
+                        )),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-
-                    RichText(text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Shaping "Skills" for "scaling" ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.black,
-                          )
-                        )
-                      ]
-                    )
-                    ),
-                    RichText(text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '-RNW',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          )
-                        )
-                      ]
-                    )
-                    )
-                  ],
-                ),
-            ),
-          )
-          )
+            ],
+          ),
+          // Positioned bottom right widget
+          BottomRightText(),
         ],
+      ),
+    );
+  }
+}
+
+class BottomRightText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: Text(
+          'Made by ShahMoksh22',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }

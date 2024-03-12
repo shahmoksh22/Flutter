@@ -1,12 +1,4 @@
 import 'package:flutter/material.dart';
-import 'ui.dart';
-import 'images.dart';
-import 'appbar.dart';
-import 'text.dart';
-import 'ElevatedButton.dart';
-import 'change.dart';
-import 'lateandalert.dart';
-import 'LabWorkChapter2Work1.dart';
 import 'MainMenu.dart';
 void main() {
   runApp(const MyApp());
