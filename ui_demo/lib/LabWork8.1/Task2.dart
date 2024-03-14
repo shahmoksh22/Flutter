@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo/bottom_right_text.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -98,22 +99,3 @@ class Home2 extends StatelessWidget {
   }
 }
 
-class BottomRightText extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Align(
-        alignment: Alignment.bottomRight,
-        child: Text(
-          'Made by ShahMoksh22',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
-  }
-}

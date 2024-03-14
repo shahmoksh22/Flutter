@@ -5,6 +5,7 @@ import 'package:ui_demo/LabWork8.2/Task2.dart';
 import 'Task1.dart';
 import 'Task4.dart';
 import 'Task5.dart';
+import 'package:ui_demo/bottom_right_text.dart';
 
 class MainMenu82 extends StatelessWidget {
   const MainMenu82({Key? key}) : super(key: key);
@@ -90,22 +91,4 @@ class MainMenu82 extends StatelessWidget {
   }
 }
 
-class BottomRightText extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Align(
-        alignment: Alignment.bottomRight,
-        child: Text(
-          'Made by ShahMoksh22',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
-  }
-}
+
