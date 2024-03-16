@@ -10,7 +10,7 @@ class BottomRightText extends StatelessWidget {
         child: Text(
           'Made by ShahMoksh22',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 14,
             fontWeight: FontWeight.bold,
           ),
