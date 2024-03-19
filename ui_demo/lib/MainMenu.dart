@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_demo/LabWork8.1/MainMenu.dart';
 import 'package:ui_demo/LabWork8.2/MainMenu.dart';
 import 'package:ui_demo/LabWork8.4/MainMenu.dart';
+import 'package:ui_demo/LabWork8.5&8.6.dart';
 import 'package:ui_demo/LabWorkChapter2Work1.dart';
 import 'package:ui_demo/LabWorkChapter2Work2.dart';
 
@@ -121,6 +122,15 @@ class _MainMenuState extends State<MainMenu> {
                     MaterialPageRoute(builder: (context) => const MainMenu84()),
                   );
                   print('Clicked Lab Work 8.4');
+                },
+              ),ListTile(
+                title: Text('Lab Work 8.5 & 8.6'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Screen85()),
+                  );
+                  print('Clicked Lab Work 8.5 & 8.6');
                 },
               ),
             ],
