@@ -5,6 +5,9 @@ import 'package:ui_demo/LabWork8.4/MainMenu.dart';
 import 'package:ui_demo/LabWork8.5&8.6.dart';
 import 'package:ui_demo/LabWorkChapter2Work1.dart';
 import 'package:ui_demo/LabWorkChapter2Work2.dart';
+import 'package:ui_demo/MokshDemoCode.dart';
+
+import 'demoharshsir.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -131,6 +134,15 @@ class _MainMenuState extends State<MainMenu> {
                     MaterialPageRoute(builder: (context) => const Screen85()),
                   );
                   print('Clicked Lab Work 8.5 & 8.6');
+                },
+              ),ListTile(
+                title: Text('Harsh Sir'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductScreen()),
+                  );
+                  print('Clicked Harsh Sir');
                 },
               ),
             ],
