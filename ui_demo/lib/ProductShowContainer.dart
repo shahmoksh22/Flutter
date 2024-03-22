@@ -11,6 +11,8 @@ class CustomProductContainer extends StatelessWidget {
   final String productBrand;
   final double initialRating;
   final int productstock;
+  final int productqty;
+  final int productid;
 
   const CustomProductContainer({
     Key? key,
@@ -22,6 +24,8 @@ class CustomProductContainer extends StatelessWidget {
     required this.productBrand,
     required this.initialRating,
     required this.productstock,
+    required this.productqty,
+    required this.productid,
   }) : super(key: key);
 
   @override
@@ -35,6 +39,7 @@ class CustomProductContainer extends StatelessWidget {
             builder: (context) => ItemDetailsPage(
               // Pass the item details to the details page
               itemName: productName,
+              itemid: productid,
               itemPrice: productPrice,
               itemDiscount: productDiscount,
               itemRating: initialRating,
@@ -42,6 +47,7 @@ class CustomProductContainer extends StatelessWidget {
               itemDescription: productDiscription,
               itemBrand: productBrand,
               itemStock: productstock,
+              itemqty: productqty,
             ),
           ),
         );
@@ -135,9 +141,11 @@ class ItemDetailsPage extends StatelessWidget {
   final String itemDiscount;
   final double itemRating;
   final int itemStock;
+  final int itemqty;
   final String itemImagePath;
   final String itemDescription;
   final String itemBrand;
+  final int itemid;
 
   const ItemDetailsPage({
     Key? key,
@@ -149,6 +157,8 @@ class ItemDetailsPage extends StatelessWidget {
     required this.itemDescription,
     required this.itemBrand,
     required this.itemStock,
+    required this.itemqty,
+    required this.itemid,
   }) : super(key: key);
 
   @override
@@ -328,14 +338,33 @@ class ItemDetailsPage extends StatelessWidget {
           Positioned(
             bottom: 20,
             right: 20,
-            child: CircleAvatar( // Wrap the Container with CircleAvatar
-              backgroundColor: Colors.red, // Set background color for the circle
-              child: Icon(
-                Icons.add_shopping_cart,
-                color: Colors.white, // Set color for the icon
+            child: GestureDetector(
+              onTap: () {
+                // if(itemqty == 0){
+                //   itemqty = 1;
+                //   // setState(() {
+                //   //
+                //   // });
+                // }
+                // else{
+                //   itemqty = 0;
+                //   // setState(() {
+                //   //   arrProduct[index]['qty'] = 0;
+                //   // });
+                // }
+               print("item id ->$itemid  Quantity -> $itemqty" );
+               
+              },
+              child: CircleAvatar(
+                backgroundColor: Colors.red,
+                child: Icon(
+                  Icons.add_shopping_cart,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
+
 
         ]
       ),
