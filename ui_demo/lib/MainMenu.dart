@@ -8,6 +8,7 @@ import 'package:ui_demo/LabWork8.5&8.6.dart';
 import 'package:ui_demo/LabWorkChapter2Work1.dart';
 import 'package:ui_demo/LabWorkChapter2Work2.dart';
 import 'package:ui_demo/MokshDemoCode.dart';
+import 'package:ui_demo/PR2.Designer/MainMenu.dart';
 
 import 'demoharshsir.dart';
 
@@ -106,6 +107,17 @@ class _MainMenuState extends State<MainMenu> {
                   //   MaterialPageRoute(builder: (context) => LabWorkChapter2Work2()),
                   // );
                   print('Clicked Lab Work 6.5');
+                },
+              ),
+
+              ListTile(
+                title: Text('PR.2'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainMenuPR2()),
+                  );
+                  print('Clicked PR.2');
                 },
               ),
               ListTile(
