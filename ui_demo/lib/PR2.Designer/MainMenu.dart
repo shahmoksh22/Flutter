@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ui_demo/LabWork8.4/File1/MainMenu.dart';
-import 'package:ui_demo/LabWork8.4/File2/MainMenu.dart';
 import 'package:ui_demo/bottom_right_text.dart';
 
 import 'Task1.dart';
+import 'Task2.dart';
 
 
 
@@ -33,13 +32,13 @@ class MainMenuPR2 extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: const Text('File 2'),
+                title: const Text('Task 2'),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MainMenu842()),
+                    MaterialPageRoute(builder: (context) => Screen2()),
                   );
-                  print('Clicked File 2');
+                  print('Clicked Task 2');
                 },
               ),
 
