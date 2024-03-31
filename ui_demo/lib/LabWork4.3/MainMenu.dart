@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ui_demo/bottom_right_text.dart';
+import 'Task1.dart';
+import 'Task2.dart';
 
-class MainMenu2 extends StatelessWidget {
-  const MainMenu2({Key? key}) : super(key: key);
+class MainMenu40 extends StatelessWidget {
+  const MainMenu40({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,29 +13,37 @@ class MainMenu2 extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text('Lab Work 4.3'),
       ),
-      body: Stack(
-        children: [
-          ListView(
-            children: <Widget>[
-              ListTile(
-                title: const Text('Task 1'),
-                onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const Home()),
-                  // );
-                  print('Clicked Task 1');
-                },
-              ),
-
-            ],
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                ListTile(
+                  title: const Text('Task 1'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Screen1()),
+                    );
+                    print('Clicked Task 1');
+                  },
+                ),
+                ListTile(
+                  title: const Text('Task 2'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Screen2()),
+                    );
+                    print('Clicked Task 2');
+                  },
+                ),
+              ],
+            ),
           ),
-          // Positioned bottom right widget
-          BottomRightText(),
+          BottomRightText(), // Positioned bottom right widget
         ],
       ),
     );
   }
 }
-
-
