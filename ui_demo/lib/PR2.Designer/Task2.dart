@@ -36,166 +36,196 @@ class _Screen2State extends State<Screen2> {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              RichText(
-                text: const TextSpan(
-                  text: 'G ',
-                  style: TextStyle(fontSize: 28, color: Colors.green),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'R',
-                        style: TextStyle(
-                            fontSize: 36,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.redAccent)),
-                    TextSpan(text: ' APHICS'),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 143, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'FLUTT ',
-                    style: TextStyle(fontSize: 28, color: Colors.blue),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'E',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' R'),
-                    ],
+              Row(
+                children: [
+                  Expanded(child: Text("G",textAlign: TextAlign.right,style: TextStyle(
+                      color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 50, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'AN ',
-                    style: TextStyle(fontSize: 28, color: Colors.green),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'D',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' ROID'),
-                    ],
+                  Text("R",style: TextStyle(
+                      color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("APHICS",style: TextStyle(
+                      color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 55, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'DESIGN ',
-                    style: TextStyle(fontSize: 28, color: Colors.yellowAccent),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: '&',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' DEVELOP'),
-                    ],
+              Row(
+                children: [
+                  Expanded(child: Text("FLUTT",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 35, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: '',
-                    style: TextStyle(fontSize: 28, color: Colors.blue),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'W',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' EB'),
-                    ],
+                  Text("E",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("R",style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 75, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'FAS ',
-                    style: TextStyle(fontSize: 28, color: Colors.yellowAccent),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'H',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' ION'),
-                    ],
+              Row(
+                children: [
+                  Expanded(child: Text("AN",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 137, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'ANIMAT ',
-                    style: TextStyle(fontSize: 28, color: Colors.cyan),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'I',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' ON'),
-                    ],
+                  Text("D",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("ROID",style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 4, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'I ',
-                    style: TextStyle(fontSize: 28, color: Colors.blue),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'T',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                      TextSpan(text: ' A-CS+'),
-                    ],
+              Row(
+                children: [
+                  Expanded(child: Text("DESIGN",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(leftPadding, 30, 143, 0),
-                child: RichText(
-                  text: const TextSpan(
-                    text: 'GAM ',
-                    style: TextStyle(fontSize: 28, color: Colors.yellowAccent),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'E',
-                          style: TextStyle(
-                              fontSize: 36,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.redAccent)),
-                    ],
+                  Text(" & ",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("DEVELOP",style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
                   ),
-                ),
+                ],
               ),
+              Row(
+                children: [
+                  Expanded(child: Text("",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                  Text("W",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("EB",style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("FAS",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                  Text("H",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("ION",style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("ANIMAT",textAlign: TextAlign.right,style: TextStyle(
+                    color: Color(0xFF009688),
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                  Text("I",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("ON",style: TextStyle(
+                    color: Color(0xFF009688),
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("I",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                  Text("T",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("A - CS+",style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("GAM",textAlign: TextAlign.right,style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                  Text("E",style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  Expanded(child: Text("",style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),)
+                  ),
+                ],
+              )
             ],
           ),
         ),
