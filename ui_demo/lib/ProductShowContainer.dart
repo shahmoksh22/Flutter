@@ -324,6 +324,7 @@ class ItemDetailsPage extends StatelessWidget {
                               color: Colors.black54,
                               fontSize: 12,
                             ),
+
                           ),
 
                         ],

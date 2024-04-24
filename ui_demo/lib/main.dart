@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo/SplashScreen.dart';
 import 'MainMenu.dart';
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:MainMenu(),
+      // home:MainMenu(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) =>SplashScreen(),      // Home page route
+        '/home': (context) =>  MainMenu(),  // MyHomePage route
+      },
     );
   }
 }

@@ -12,6 +12,8 @@ import 'package:ui_demo/LabWorkChapter2Work2.dart';
 import 'package:ui_demo/MokshDemoCode.dart';
 import 'package:ui_demo/PR2.Designer/MainMenu.dart';
 
+import 'LabWork11.3/Game.dart';
+import 'LabWork13.1/ResumeBuilder.dart';
 import 'demoharshsir.dart';
 
 class MainMenu extends StatefulWidget {
@@ -186,6 +188,24 @@ class _MainMenuState extends State<MainMenu> {
                     MaterialPageRoute(builder: (context) => const MainMenu111()),
                   );
                   print('Lab Work 11.1');
+                },
+              ),ListTile(
+                title: Text('Lab Work 11.3'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  DotCatcherGame()),
+                  );
+                  print('Lab Work 11.3');
+                },
+              ),ListTile(
+                title: Text('Lab Work 13.1'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  ResumeBuilder()),
+                  );
+                  print('Lab Work 13.1');
                 },
               ),
             ],
