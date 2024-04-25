@@ -14,6 +14,7 @@ import 'package:ui_demo/PR2.Designer/MainMenu.dart';
 
 import 'LabWork11.3/Game.dart';
 import 'LabWork13.1/ResumeBuilder.dart';
+import 'LabWork13.2/ResumeBuilder2.dart';
 import 'demoharshsir.dart';
 
 class MainMenu extends StatefulWidget {
@@ -206,6 +207,15 @@ class _MainMenuState extends State<MainMenu> {
                     MaterialPageRoute(builder: (context) =>  ResumeBuilder()),
                   );
                   print('Lab Work 13.1');
+                },
+              ),ListTile(
+                title: Text('Lab Work 13.3'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  IndexedStackExample()),
+                  );
+                  print('Lab Work 13.3');
                 },
               ),
             ],
