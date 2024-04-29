@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:resume_builder/CarrierObjectives.dart';
+import 'package:resume_builder/ContactInfo.dart';
+import 'package:resume_builder/Education.dart';
+import 'package:resume_builder/HomeScreen.dart';
+import 'package:resume_builder/References.dart';
+import 'package:resume_builder/Settings.dart';
 import 'package:resume_builder/SplashScreen.dart';
-import 'package:resume_builder/mainmenu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,8 +41,13 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) =>SplashScreen(),      // Home page route
-        '/home': (context) =>  mainmenu(),  // MyHomePage route
+        '/': (context) =>const SplashScreen(),
+        '/home': (context) =>const HomeScreen(),
+        '/settings': (context) =>const Settings(),
+        '/contact': (context) => ContactInfo(),
+        '/carrier': (context) =>const CarrierObjective(),
+        '/education': (context) =>const Education(),
+        '/references': (context) =>const References(),
       },
     );
   }
