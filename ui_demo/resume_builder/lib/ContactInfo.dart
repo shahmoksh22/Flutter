@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ContactInfo extends StatefulWidget {
   @override
@@ -18,6 +19,15 @@ class _ContactInfo extends State<ContactInfo> {
   String _address1 = ''; // Variable to store the entered email
   String _address2 = ''; // Variable to store the entered email
   String _address3 = ''; // Variable to store the entered email
+  XFile? _image;
+
+  Future getImage() async{
+    final XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      _image=image;
+    });
+  }
 
   void _submitForm() {
     // Check if the form is valid
@@ -30,6 +40,18 @@ class _ContactInfo extends State<ContactInfo> {
       print('Address: $_address1'); // Print the email
       print('Address: $_address2'); // Print the email
       print('Address: $_address3'); // Print the email
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text('Form Submitted Successfully!'),
+          action: SnackBarAction(
+            label: 'Home',
+            onPressed: () {
+              Navigator.pushNamed(context, "/home");
+            },
+          ),
+        ),
+      );
     }
   }
 
@@ -275,7 +297,7 @@ class _ContactInfo extends State<ContactInfo> {
                   // Child 2
                   Container(
                     child: Center(
-                      child: Stack(
+                      child: (_image == null) ? Stack(
                         clipBehavior: Clip
                             .none, // Allows the floating button to be positioned outside the container stack
                         children: <Widget>[
@@ -304,7 +326,7 @@ class _ContactInfo extends State<ContactInfo> {
                             bottom: 20, // Center it vertically with the container
                             child: FloatingActionButton(
                               onPressed: () {
-                                // Your onPressed code here
+                                getImage();
                               },
                               child: Icon(Icons.add),
                               backgroundColor:
@@ -312,7 +334,7 @@ class _ContactInfo extends State<ContactInfo> {
                             ),
                           ),
                         ],
-                      ),
+                      ) : Image.file(File(_image!.path)),
                     ),
                   )
                 ],

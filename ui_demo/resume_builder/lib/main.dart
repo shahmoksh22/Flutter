@@ -7,6 +7,8 @@ import 'package:resume_builder/References.dart';
 import 'package:resume_builder/Settings.dart';
 import 'package:resume_builder/SplashScreen.dart';
 
+import 'PersonalDetails.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -48,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/carrier': (context) =>const CarrierObjective(),
         '/education': (context) =>const Education(),
         '/references': (context) =>const References(),
+        '/personaldetails': (context) =>const PersonalDetails(),
       },
     );
   }
