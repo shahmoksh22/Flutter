@@ -13,7 +13,7 @@ List<Option> listArr = [
   Option(icons: Icons.cases_outlined, title: 'Career Objective', path: '/carrier'),
   Option(icons: Icons.person_outline_outlined, title: 'Personal Details', path: '/personaldetails'),
   Option(icons: Icons.e_mobiledata_outlined, title: 'Education', path: '/education'),
-  Option(icons: Icons.people, title: 'Experiences', path: '/home'),
+  Option(icons: Icons.people, title: 'Experiences', path: '/DynamicScreen'),
   Option(icons: Icons.menu_book_sharp, title: 'Technical Skills', path: '/home'),
   Option(icons: Icons.menu_book_sharp, title: 'Interest/Hobbies', path: '/home'),
   Option(icons: Icons.menu_book_sharp, title: 'Projects', path: '/home'),
