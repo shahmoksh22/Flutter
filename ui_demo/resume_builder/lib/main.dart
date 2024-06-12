@@ -3,6 +3,7 @@ import 'package:resume_builder/CarrierObjectives.dart';
 import 'package:resume_builder/ContactInfo.dart';
 import 'package:resume_builder/Dynamic_list.dart';
 import 'package:resume_builder/Education.dart';
+import 'package:resume_builder/Experience.dart';
 import 'package:resume_builder/HomeScreen.dart';
 import 'package:resume_builder/References.dart';
 import 'package:resume_builder/Settings.dart';
@@ -52,7 +53,8 @@ class MyApp extends StatelessWidget {
         '/education': (context) =>const Education(),
         '/references': (context) =>const References(),
         '/personaldetails': (context) =>const PersonalDetails(),
-        '/DynamicScreen': (context) =>DynamicScreen(),
+        '/DynamicScreen': (context) =>DynamicForm(),
+        '/Experience': (context) =>Experience(),
       },
     );
   }

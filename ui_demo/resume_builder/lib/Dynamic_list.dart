@@ -1,166 +1,27 @@
-// import 'package:flutter/material.dart';
-//
-// class DynamicForm extends StatefulWidget {
-//   @override
-//   _DynamicFormState createState() => _DynamicFormState();
-// }
-//
-// class _DynamicFormState extends State<DynamicForm> {
-//
-// // list to store dynamic text field widgets
-//   List<DynamicWidget> listDynamic = [];
-//
-// // list to store data
-// // entered in text fields
-//   List<String> data = [];
-//
-// // icon for floating action button
-//   Icon floatingIcon =  const Icon(Icons.add);
-//
-// // function to add dynamic
-// // text field widget to list
-//   addDynamic() {
-//     // if data is already present, clear
-//     // it before adding more text fields
-//     if (data.length != 0) {
-//       floatingIcon = new Icon(Icons.add);
-//       data = [];
-//       listDynamic = [];
-//     }
-//
-//     // limit number of text fields to 5
-//     if (listDynamic.length >= 5) {
-//       return;
-//     }
-//
-//     // add new dynamic text field widget to list
-//     listDynamic.add(new DynamicWidget());
-//     setState(() {});
-//   }
-//
-// // function to retrieve data from
-// // text fields and display in a list
-//   submitData() {
-//     // change icon to back arrow and clear existing data
-//     floatingIcon = new Icon(Icons.arrow_back);
-//     data = [];
-//
-//     // retrieve data from each text field widget and add to data list
-//     listDynamic.forEach((widget) => data.add(widget.controller.text));
-//
-//     setState(() {});
-//     print(data.length);
-//     data.forEach((element) {
-//       print(element);
-//     });
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     // widget to display list of entered data
-//     Widget result = new Flexible(
-//         flex: 1,
-//         child: new Card(
-//           child: ListView.builder(
-//             itemCount: data.length,
-//             itemBuilder: (_, index) {
-//               return new Padding(
-//                 padding: new EdgeInsets.all(10.0),
-//                 child: new Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   children: <Widget>[
-//                     new Container(
-//                       margin: new EdgeInsets.only(left: 10.0),
-//                       child: new Text("${index + 1} : ${data[index]}"),
-//                     ),
-//                     new Divider()
-//                   ],
-//                 ),
-//               );
-//             },
-//           ),
-//         ));
-//
-//     // widget to display dynamic text field widgets
-//     Widget dynamicTextField = new Flexible(
-//       flex: 2,
-//       child: new ListView.builder(
-//         itemCount: listDynamic.length,
-//         itemBuilder: (_, index) => listDynamic[index],
-//       ),
-//     );
-//
-//     // widget for submitting data
-//     Widget submitButton = new Container(
-//       child: new TextButton(
-//         onPressed: submitData,
-//         child: new Padding(
-//           padding: new EdgeInsets.all(16.0),
-//           child: new Text('Submit Data'),
-//         ),
-//       ),
-//     );
-//
-//     return new Scaffold(
-//         appBar: new AppBar(
-//           title: new Text('Dynamic App'),
-//         ),
-//         body: new Container(
-//           margin: new EdgeInsets.all(10.0),
-//           child: new Column(
-//             children: <Widget>[
-//               // if data is present, display result widget, else display dynamic text field widget
-//               data.length == 0 ? dynamicTextField : result,
-//               // if data is present, display submit button
-//               data.length == 0 ? submitButton : new Container(),
-//             ],
-//           ),
-//         ),
-//         // floating action button to add dynamic text field widgets
-//         floatingActionButton: new FloatingActionButton(
-//           onPressed: addDynamic,
-//           child: floatingIcon,
-//         ),
-//     );
-//   }
-// }
-//
-// // widget for dynamic text field
-// class DynamicWidget extends StatelessWidget {
-//   TextEditingController controller = new TextEditingController();
-//
-//   @override
-//   Widget build(BuildContext context){
-//     return Container(
-//       margin: new EdgeInsets.all(8.0),
-//       child: new TextField(
-//         controller: controller,
-//         decoration: new InputDecoration(hintText: 'Enter Data '),
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 
-class DynamicScreen extends StatefulWidget {
+class DynamicForm extends StatefulWidget {
   @override
-  _DynamicScreenState createState() => _DynamicScreenState();
+  _DynamicFormState createState() => _DynamicFormState();
 }
 
-class _DynamicScreenState extends State<DynamicScreen> {
-  // list to store dynamic text field widgets
+class _DynamicFormState extends State<DynamicForm> {
+
+// list to store dynamic text field widgets
   List<DynamicWidget> listDynamic = [];
 
-  // list to store data entered in text fields
+// list to store data
+// entered in text fields
   List<String> data = [];
 
-  // icon for floating action button
-  Icon floatingIcon = new Icon(Icons.add);
+// icon for floating action button
+  Icon floatingIcon =  const Icon(Icons.add);
 
-
-  // function to add dynamic text field widget to list
+// function to add dynamic
+// text field widget to list
   addDynamic() {
-    // if data is already present, clear it before adding more text fields
+    // if data is already present, clear
+    // it before adding more text fields
     if (data.length != 0) {
       floatingIcon = new Icon(Icons.add);
       data = [];
@@ -173,18 +34,12 @@ class _DynamicScreenState extends State<DynamicScreen> {
     }
 
     // add new dynamic text field widget to list
-    listDynamic.add(new DynamicWidget(
-      index: listDynamic.length,
-      onDelete: (index) {
-        setState(() {
-          listDynamic.removeAt(index);
-        });
-      },
-    ));
+    listDynamic.add(new DynamicWidget());
     setState(() {});
   }
 
-  // function to retrieve data from text fields and display in a list
+// function to retrieve data from
+// text fields and display in a list
   submitData() {
     // change icon to back arrow and clear existing data
     floatingIcon = new Icon(Icons.arrow_back);
@@ -195,34 +50,36 @@ class _DynamicScreenState extends State<DynamicScreen> {
 
     setState(() {});
     print(data.length);
+    data.forEach((element) {
+      print(element);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     // widget to display list of entered data
     Widget result = new Flexible(
-      flex: 1,
-      child: new Card(
-        child: ListView.builder(
-          itemCount: data.length,
-          itemBuilder: (_, index) {
-            return new Padding(
-              padding: new EdgeInsets.all(10.0),
-              child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  new Container(
-                    margin: new EdgeInsets.only(left: 10.0),
-                    child: new Text("${index + 1} : ${data[index]}"),
-                  ),
-                  new Divider()
-                ],
-              ),
-            );
-          },
-        ),
-      ),
-    );
+        flex: 1,
+        child: new Card(
+          child: ListView.builder(
+            itemCount: data.length,
+            itemBuilder: (_, index) {
+              return new Padding(
+                padding: new EdgeInsets.all(10.0),
+                child: new Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    new Container(
+                      margin: new EdgeInsets.only(left: 10.0),
+                      child: new Text("${index + 1} : ${data[index]}"),
+                    ),
+                    new Divider()
+                  ],
+                ),
+              );
+            },
+          ),
+        ));
 
     // widget to display dynamic text field widgets
     Widget dynamicTextField = new Flexible(
@@ -244,8 +101,7 @@ class _DynamicScreenState extends State<DynamicScreen> {
       ),
     );
 
-    return new MaterialApp(
-      home: new Scaffold(
+    return new Scaffold(
         appBar: new AppBar(
           title: new Text('Dynamic App'),
         ),
@@ -265,41 +121,21 @@ class _DynamicScreenState extends State<DynamicScreen> {
           onPressed: addDynamic,
           child: floatingIcon,
         ),
-      ),
     );
   }
 }
 
 // widget for dynamic text field
 class DynamicWidget extends StatelessWidget {
-  final TextEditingController controller;
-  final Function(int) onDelete;
-
-  final int index;
-
-  DynamicWidget({Key? key, required this.onDelete, required this.index})
-      : controller = new TextEditingController(),
-        super(key: key);
+  TextEditingController controller = new TextEditingController();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Container(
       margin: new EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: new TextField(
-              controller: controller,
-              decoration: new InputDecoration(hintText: 'Enter Data'),
-            ),
-          ),
-          IconButton(
-            icon: Icon(Icons.delete),
-            onPressed: () {
-              onDelete(index);
-            },
-          ),
-        ],
+      child: new TextField(
+        controller: controller,
+        decoration: new InputDecoration(hintText: 'Enter Data '),
       ),
     );
   }

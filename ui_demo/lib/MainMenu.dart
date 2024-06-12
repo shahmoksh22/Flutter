@@ -12,6 +12,7 @@ import 'package:ui_demo/LabWorkChapter2Work2.dart';
 import 'package:ui_demo/MokshDemoCode.dart';
 import 'package:ui_demo/PR2.Designer/MainMenu.dart';
 
+import 'DialogBox.dart';
 import 'LabWork11.3/Game.dart';
 import 'LabWork13.1/ResumeBuilder.dart';
 import 'LabWork13.2/ResumeBuilder2.dart';
@@ -216,6 +217,15 @@ class _MainMenuState extends State<MainMenu> {
                     MaterialPageRoute(builder: (context) =>  IndexedStackExample()),
                   );
                   print('Lab Work 13.3');
+                },
+              ),ListTile(
+                title: Text('DialogBoxScreen'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  DialogBoxScreen()),
+                  );
+                  print('DialogBoxScreen');
                 },
               ),
             ],
